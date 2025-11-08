@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp2.UserEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit User" Height="300" Width="300" WindowStartupLocation="CenterOwner">
+    <Grid Margin="15">
+        <StackPanel>
+            <TextBlock Text="Name:" Margin="0,0,0,5"/>
+            <TextBox Name="NameBox" Text="{Binding Name}" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Email:" Margin="0,0,0,5"/>
+            <TextBox Name="EmailBox" Text="{Binding Email}" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Age:" Margin="0,0,0,5"/>
+            <TextBox Name="AgeBox" Text="{Binding Age}" Margin="0,0,0,10"/>
+
+            <CheckBox Content="Active" IsChecked="{Binding IsActive}" Margin="0,0,0,15"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Svaga" Click="Save_Click" Margin="5" Padding="10,5" IsDefault="True"/>
+                <Button Content="Cancord" Click="Cancel_Click" Margin="5" Padding="10,5" IsCancel="True"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
